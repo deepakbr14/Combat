@@ -1,0 +1,93 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ab478703-0151-4e94-a01d-6db54acd7e9b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Combat</Name>
+    <RootNamespace>Combat</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Combat.py" />
+    <Compile Include="Mine.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fragment.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Palette.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Radar.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scope.py" />
+    <Compile Include="ScoreBar.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Retro3D\Retro3D\Retro3D.pyproj">
+      <Name>Retro3D</Name>
+      <Project>{396a8f1e-106c-466f-8d21-09edf5de503c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="rez\" />
+    <Folder Include="rez\art\" />
+    <Folder Include="rez\art\images\" />
+    <Folder Include="rez\art\models\" />
+    <Folder Include="rez\art\models\cone\" />
+    <Folder Include="rez\art\models\cube\" />
+    <Folder Include="rez\art\models\icosphere\" />
+    <Folder Include="rez\fonts\" />
+    <Folder Include="rez\sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="rez\art\images\radar.png" />
+    <Content Include="rez\art\images\scope.png" />
+    <Content Include="rez\art\images\score_bar.png" />
+    <Content Include="rez\art\models\cone\cone.mtl" />
+    <Content Include="rez\art\models\cone\cone.obj" />
+    <Content Include="rez\art\models\cube\cube.mtl" />
+    <Content Include="rez\art\models\cube\cube.obj" />
+    <Content Include="rez\art\models\icosphere\icosphere.mtl" />
+    <Content Include="rez\art\models\icosphere\icosphere.obj" />
+    <Content Include="rez\fonts\WhiteRabbit.ttf" />
+    <Content Include="rez\sound\Explosion2.wav" />
+    <Content Include="rez\sound\Gun9.wav" />
+    <Content Include="rez\sound\MineLaunchSeeker.wav" />
+    <Content Include="rez\sound\Spider.wav" />
+    <Content Include="rez\sound\TargetDeathA.wav" />
+    <Content Include="rez\sound\TargetDeathB.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
